@@ -3761,3 +3761,166 @@ ul.menu li.column-1 .submenu > li > a i {
 @media (max-width:320px) {
 
 }
+
+
+/* offer slider CSS */
+#special_offers,
+#just_arrived,
+#brands,
+#most_viewed_products {
+    width: 90%;
+    padding: 20px 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+}
+#special_offers .heading-title,
+#just_arrived .heading-title,
+#brands .heading-title,
+#most_viewed_products .heading-title {
+    border: 1px solid;
+    padding-left: 10px ;
+    font-weight: bolder;
+}
+#special_offers .promotionalslider_wrapper,
+#just_arrived .promotionalslider_wrapper,
+#brands .promotionalslider_wrapper,
+#most_viewed_products .promotionalslider_wrapper {
+    width: 100%;
+    display: flex;
+    /* slick initialized */
+}
+#special_offers .promotionalslider_wrapper .slick-arrow,
+#just_arrived .promotionalslider_wrapper .slick-arrow,
+#brands .promotionalslider_wrapper .slick-arrow,
+#most_viewed_products .promotionalslider_wrapper .slick-arrow {
+    font-size: 0;
+    width: 40px;
+    height: 50px;
+    border-radius: 100%;
+    -webkit-appearance: none;
+    border: 0;
+    background: #444;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+#special_offers .promotionalslider_wrapper .slick-arrow:before,
+#just_arrived .promotionalslider_wrapper .slick-arrow:before,
+#brands .promotionalslider_wrapper .slick-arrow:before,
+#most_viewed_products .promotionalslider_wrapper .slick-arrow:before {
+    font-size: 23px;
+    color: #fff;
+}
+#special_offers .promotionalslider_wrapper .slick-arrow.slick-next:before,
+#just_arrived .promotionalslider_wrapper .slick-arrow.slick-next:before,
+#brands .promotionalslider_wrapper .slick-arrow.slick-next:before,
+#most_viewed_products .promotionalslider_wrapper .slick-arrow.slick-next:before {
+    content: ">";
+    position: absolute;
+    left: 20px;
+}
+#special_offers .promotionalslider_wrapper .slick-arrow.slick-prev:before,
+#just_arrived .promotionalslider_wrapper .slick-arrow.slick-prev:before,
+#brands .promotionalslider_wrapper .slick-arrow.slick-prev:before,
+#most_viewed_products .promotionalslider_wrapper .slick-arrow.slick-prev:before {
+    content: "<";
+    position: absolute;
+    right: 20px;
+}
+#special_offers .promotionalslider_wrapper .slick-arrow:hover,
+#just_arrived .promotionalslider_wrapper .slick-arrow:hover,
+#brands .promotionalslider_wrapper .slick-arrow:hover,
+#most_viewed_products .promotionalslider_wrapper .slick-arrow:hover {
+    cursor: pointer;
+}
+#special_offers .promotionalslider_wrapper .slick-arrow.slick-disabled,
+#just_arrived .promotionalslider_wrapper .slick-arrow.slick-disabled,
+#brands .promotionalslider_wrapper .slick-arrow.slick-disabled,
+#most_viewed_products .promotionalslider_wrapper .slick-arrow.slick-disabled {
+    opacity: 0.5;
+    background: #ccc;
+}
+#special_offers .promotionalslider_wrapper .slick-arrow.slick-disabled:hover,
+#just_arrived .promotionalslider_wrapper .slick-arrow.slick-disabled:hover,
+#brands .promotionalslider_wrapper .slick-arrow.slick-disabled:hover,
+#most_viewed_products .promotionalslider_wrapper .slick-arrow.slick-disabled:hover {
+    cursor: not-allowed;
+}
+#special_offers .promotionalslider_wrapper.slick-initialized,
+#just_arrived .promotionalslider_wrapper.slick-initialized,
+#brands .promotionalslider_wrapper.slick-initialized,
+#most_viewed_products .promotionalslider_wrapper.slick-initialized {
+    position: relative;
+    border: 1px solid;
+    padding: 10px;
+}
+#special_offers .promotionalslider_wrapper.slick-initialized .slick-arrow,
+#just_arrived .promotionalslider_wrapper.slick-initialized .slick-arrow,
+#brands .promotionalslider_wrapper.slick-initialized .slick-arrow,
+#most_viewed_products .promotionalslider_wrapper.slick-initialized .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+}
+#special_offers .promotionalslider_wrapper.slick-initialized .slick-next,
+#just_arrived .promotionalslider_wrapper.slick-initialized .slick-next,
+#brands .promotionalslider_wrapper.slick-initialized .slick-next,
+#most_viewed_products .promotionalslider_wrapper.slick-initialized .slick-next {
+    right: -25px;
+}
+#special_offers .promotionalslider_wrapper.slick-initialized .slick-prev,
+#just_arrived .promotionalslider_wrapper.slick-initialized .slick-prev,
+#brands .promotionalslider_wrapper.slick-initialized .slick-prev,
+#most_viewed_products .promotionalslider_wrapper.slick-initialized .slick-prev {
+    left: -25px;
+}
+#special_offers .promotionalslider_wrapper .promotionalslider_single,
+#just_arrived .promotionalslider_wrapper .promotionalslider_single,
+#brands .promotionalslider_wrapper .promotionalslider_single,
+#most_viewed_products .promotionalslider_wrapper .promotionalslider_single {
+    display: flex;
+    width: 25%;
+    flex: 0 0 25%;
+    flex-direction: column;
+    border: 5px solid #444;
+    margin: 0 10px;
+}
+#special_offers .promotionalslider_wrapper .promotionalslider_single section,
+#just_arrived .promotionalslider_wrapper .promotionalslider_single section,
+#brands .promotionalslider_wrapper .promotionalslider_single section,
+#most_viewed_products .promotionalslider_wrapper .promotionalslider_single section {
+    background: no-repeat center center/cover;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+}
+#special_offers .promotionalslider_wrapper .promotionalslider_single p,
+#just_arrived .promotionalslider_wrapper .promotionalslider_single p,
+#brands .promotionalslider_wrapper .promotionalslider_single p,
+#most_viewed_products .promotionalslider_wrapper .promotionalslider_single p {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    font-size: 19px;
+}
+
+.copyright {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color:#000;
+    font-size: 15px;
+    border: 1px solid #000;
+    text-align: center;
+}
+.copyright a {
+    color:#01c7e9;
+    transition: all 0.2s ease 0s;
+}
+.copyright a:hover {
+    color:#ff3666;
+}

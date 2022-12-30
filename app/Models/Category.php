@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Constants\Constants;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
@@ -14,6 +15,8 @@ class Category extends Model implements HasMedia
     use HasFactory, HasSlug, InteractsWithMedia;
 
     protected $fillable = ['name', 'slug', 'parent_id'];
+
+    protected $appends = ['thumb_image'];
 
     public function getSlugOptions() : SlugOptions
     {
@@ -30,5 +33,10 @@ class Category extends Model implements HasMedia
     public function products()
     {
         return $this->hasMany(Product::class,'category_id','id');
+    }
+
+    public function getThumbImageAttribute()
+    {
+        return $this->getFirstMediaUrl(Constants::CATEGORY_MEDIA_COLLECTION_NAME) ?? asset('assets/images/default-image.png');
     }
 }

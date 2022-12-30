@@ -77,7 +77,7 @@ class ProductService
      *
      * @return object
      */
-    public function getSpecialOfferProducts($hasPagination = false, $paginationCount = Constants::PRODUCTS_PAGINATION_COUNT)
+    public function getSpecialOfferProducts($hasPagination = false, $paginationCount = Constants::OFFER_PRODUCTS_PAGINATION_COUNT)
     {
         return $this->productRepository->getSpecialOfferProducts($hasPagination, $paginationCount);
     }

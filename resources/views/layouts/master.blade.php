@@ -9,10 +9,11 @@
         @include('layouts.style')
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
             @include('layouts.header')
             @yield('content')
         </div>
+        @include('layouts.footer')
         @include('layouts.scripts')
     </body>
 </html>

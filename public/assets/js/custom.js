@@ -1,25 +1,3 @@
-$(document).ready(function(){
-
-    $('#itemslider').carousel({ interval: 3000 });
-
-    $('.carousel-showmanymoveone .item').each(function(){
-        var itemToClone = $(this);
-
-        for (var i=1;i<6;i++) {
-            itemToClone = itemToClone.next();
-
-            if (!itemToClone.length) {
-                itemToClone = $(this).siblings(':first');
-            }
-
-            itemToClone.children(':first-child').clone()
-                .addClass("cloneditem-"+(i))
-                .appendTo($(this));
-        }
-    });
-});
-
-
 $(document).ready(function() {
     $("#sidebarCollapse").on("click", function() {
         $("#sidebar").addClass("active");
@@ -40,7 +18,6 @@ $(document).ready(function() {
         $(".overlay").removeClass("visible");
     });
 });
-
 
 ;(function($) {
 
@@ -261,3 +238,71 @@ $(document).ready(function() {
     });
 
 })(jQuery);
+
+$(document).ready(function(){
+
+    $('.special_offers_wrapper').slick({
+        infinite: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+        ]
+    });
+
+    $('.brands').slick({
+        infinite: false,
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+        ]
+    });
+
+    $('.most_viewed_products_wrapper').slick({
+        infinite: false,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+        ]
+    });
+
+    $('.just_arrived_wrapper').slick({
+        infinite: false,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            }
+        ]
+    });
+});
+

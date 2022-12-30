@@ -32,6 +32,8 @@ class Product extends Model implements HasMedia
         'brand_id'
     ];
 
+    protected $appends = ['thumb_image'];
+
     /**
      * The attributes that should be cast.
      *
@@ -74,5 +76,10 @@ class Product extends Model implements HasMedia
     {
         return $query->where('discount_start_at', '<=', now()->toDateTimeString())
                     ->where('discount_end_at', '>=', now()->toDateTimeString());
+    }
+
+    public function getThumbImageAttribute()
+    {
+        return $this->getFirstMediaUrl(Constants::PRODUCT_MEDIA_COLLECTION_NAME) ?? asset('assets/images/default-image.png');
     }
 }
